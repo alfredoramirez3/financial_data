@@ -1,0 +1,61 @@
+# development environment 
+open terminal in wsl
+
+# project directory
+navigate to ~/my_projects
+
+# project structure
+cookiecutter https://github.com/py-pkgs/py-pkgs-cookiecutter.git
+author_name: Alfredo Ramirez
+package_name: financial_data
+package_short_description:
+package_version: [0.1.0]
+open_source_license: 1 - MIT
+Select include_github_actions: no
+
+# set up local version control
+cd financial_data
+git init
+
+# add all files to version control
+git add .
+git commit -m "initial package setup"
+
+# set up remote version control
+go to github and create a financial_data repository
+
+# use github
+# ..or push an existing repository from the command line
+git remote add origin git@github.com:alfredoramirez3/financial_data.git
+git branch -M main
+git push -u origin main
+
+# create a virtual environment
+conda create --name financial_data python=3.9 -y
+
+# activate the environment
+conda activate financial_data
+
+# install poetry
+conda install poetry
+
+# use poetry to install yfinance, note pandas and numpy were also installed
+poetry add yfinance
+
+# add matplotlib
+poetry add matplotlib
+
+
+# 
+git add pyproject.toml
+git commit -m 'feat: add plotting module, add stock info module'
+git add financial_data.ipynb
+git commit -m 'feat: add jupyter notebook code'
+git push
+
+# references
+https://github.com/ranaroussi/yfinance
+
+
+
+ 
