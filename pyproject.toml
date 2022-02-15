@@ -8,6 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+yfinance = "^0.1.70"
+matplotlib = "^3.5.1"
 
 [tool.poetry.dev-dependencies]
 
